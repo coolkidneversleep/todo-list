@@ -12,6 +12,7 @@ function App() {
       <SearchTask></SearchTask>
       <TaskItem></TaskItem>
       <TaskItem></TaskItem>
+      <TaskItem></TaskItem>
     </div>
   );
 }

@@ -101,6 +101,19 @@
   color: white;
   background: #7868E6;
 }
+.labelSortDate{
+  font-family: Quicksand;
+  font-size: 1.2em;
+  color: #313131;
+  width: 60%;
+}
+.sortByDate{
+  display: flex;
+  align-items: center;
+}
+.sortDateBox{
+  width: 80%;
+}
 .topic{
   margin: 0;
   padding-right: 3%;
@@ -110,7 +123,7 @@
   color: #313131;
 }
 .taskCard{
-  padding-top: 2%;
+  padding-top: 4vh;
   padding-left: 16%;
   display: flex;
   flex-direction: column;
@@ -187,6 +200,74 @@
   background: #F0EFFF;
   border:none;
   cursor: pointer;
+}
+.editBox{
+  display: flex;
+  flex-direction: column;
+  padding: 2vh 2vw;
+  padding-top: 0;
+}
+
+.editTitle{
+  font-family: Quicksand;
+  font-size: 1.75em;
+  font-weight: 500;
+  color:#7868E6;
+}
+.editInputBox{
+  margin-right: 5%;
+  padding: 3vh 0;
+  width: 100%;
+  font-family: Quicksand;
+  font-size: 2vh !important;
+  border-width: thin;
+  border-left: white;
+  border-right: white;
+  border-top: white;
+  border-color:#313131;
+  outline: none;
+}
+.editLabelSortDate{
+  font-family: Quicksand;
+  font-size: 1em;
+  color: #313131;
+  width: 60%;
+}
+.editSortDateBox{
+  display: flex;
+  align-items: center;
+}
+.editSortByDate{
+  display: flex;
+  align-items: center;
+  padding-top: 3vh;
+}
+.updateButton{
+  background: #7868E6;
+  border-radius: 10px;
+  border: none;
+  margin-right: 2em;
+  padding: 1vh 2vw ;
+  font-family: Quicksand;
+  color: white;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+}
+.cancleButton{
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #7868E6;
+  padding: 1vh 2vw ;
+  font-family: Quicksand;
+  color: #7868E6;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+}
+.buttonRow{
+  display: flex;
+  padding-top: 2em;
 }
 
 @media (prefers-reduced-motion: no-preference) {
