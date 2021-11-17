@@ -110,32 +110,48 @@
   color: #313131;
 }
 .taskCard{
-  padding-top: 3%;
-  padding-left: 8%;
+  padding-top: 2%;
+  padding-left: 16%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 50%;
+  width: 60%;
 }
 .taskPart{
   display: flex;
-  width: 100%;
-  height: 30%;
+  height: 5vh;
   background: #F0EFFF;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  padding: 3%;
+  padding: 2vh;
+  padding-bottom: 3vh;
   border: none;
-  cursor: pointer;
+  justify-content: space-between;
 }
 .checkTask{
-  margin-top: 0.5em;
+  padding-top: 1vh;
+  width: 20px;
+  height: 20px;
+}
+.checkDiv{
+  display: flex;
+  justify-items: center;
+}
+.listBox{
+  display: flex;
+  flex-direction: column;
 }
 .taskName{
   font-family: Quicksand;
   font-size: 1.35em;
   color: #313131;
   padding-left: 1vw;
+  padding-bottom: 0;
+}
+.date{
+  font-family: Quicksand;
+  font-size: 0.75em;
+  color: #7868E6;
+  margin-left: 1vw;
+  padding:0;
 }
 .arrowDown{
   color:#7868E6;
@@ -159,6 +175,18 @@
   font-family: Quicksand;
   font-size: 1em;
   color:#313131;
+}
+.functionBox{
+  display: flex;
+  align-content: space-between ;
+}
+.functionImg{
+  margin-right: 0.5vw;
+}
+.functionButton{
+  background: #F0EFFF;
+  border:none;
+  cursor: pointer;
 }
 
 @media (prefers-reduced-motion: no-preference) {

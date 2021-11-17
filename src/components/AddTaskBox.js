@@ -14,7 +14,7 @@ function AddTaskBox(){
             <div className="dateBox">
                 <DatePicker className="datePicker"selected={startDate} onChange={(date) => setStartDate(date)} />
             </div>
-            <button className="addButton">add</button>
+            <button className="addButton">Add</button>
         </div>
     );
 }
