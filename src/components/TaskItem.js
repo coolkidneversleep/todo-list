@@ -25,9 +25,13 @@ function TaskItem() {
         p: 4,
         padding: '20px'
     };
-    const [open, setOpen] = React.useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+    const [openEdit, setOpenEdit] = React.useState(false);
+    const handleOpenEdit = () => setOpenEdit(true);
+    const handleCloseEdit = () => setOpenEdit(false);
+
+    const [openDelete, setOpenDelete] = React.useState(false);
+    const handleOpenDelete = () => setOpenDelete(true);
+    const handleCloseDelete = () => setOpenDelete(false);
 
     const [click, setClick] = useState(false);
 
@@ -48,10 +52,10 @@ function TaskItem() {
                     </div>
                 </div>
                 <div className="functionBox">
-                    <button onClick={handleOpen} className="functionButton"><img className="functionImg" src={editImg}></img></button>
+                    <button onClick={handleOpenEdit} className="functionButton"><img className="functionImg" src={editImg}></img></button>
                     <Modal
-                        open={open}
-                        onClose={handleClose}
+                        open={openEdit}
+                        onClose={handleCloseEdit}
                         aria-labelledby="modal-modal-title"
                         aria-describedby="modal-modal-description"
                     >
@@ -68,12 +72,28 @@ function TaskItem() {
                                 </div>
                                 <div className="buttonRow">
                                     <button className="updateButton">update</button>
-                                    <button className="cancleButton" onClick={handleClose}>cancle</button>
+                                    <button className="cancleButton" onClick={handleCloseEdit}>cancle</button>
                                 </div>
                             </div>
                         </Box>
                     </Modal>
-                    <button className="functionButton"><img className="functionImg" src={deleteImg}></img></button>
+                    <button onClick={handleOpenDelete}className="functionButton"><img className="functionImg" src={deleteImg}></img></button>
+                    <Modal
+                        open={openDelete}
+                        onClose={handleCloseDelete}
+                        aria-labelledby="modal-modal-title"
+                        aria-describedby="modal-modal-description"
+                    >
+                        <Box sx={style}>
+                            <div className="editBox">
+                                <p className="editTitle">Delete this task?</p>
+                                <div className="buttonRow">
+                                    <button className="updateButton">delete</button>
+                                    <button className="cancleButton" onClick={handleCloseDelete}>cancle</button>
+                                </div>
+                            </div>
+                        </Box>
+                    </Modal>
                     <button onClick={getClick} className="functionButton"><img className="functionImg" src={arrowImg}></img></button>
                 </div>
             </div>
