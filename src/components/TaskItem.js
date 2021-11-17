@@ -8,9 +8,26 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import DatePicker from "react-datepicker";
 
+
 import "/Users/coolkiddo/Desktop/to-do-list/node_modules/react-datepicker/dist/react-datepicker.css";
 
-function TaskItem() {
+function TaskItem(props) {
+    // const [tasks, setTask] =useState('');
+    // const getTask = () =>{
+    //     const task = props.data.task;
+    //     setTask(task);
+    // };
+    // const [descriptions, setDescription] = useState('');
+    // const getDescription = () =>{
+    //     const description = props.data.description;
+    //     setDescription(description);
+    // }
+    // const [dates, setDate] = useState('');
+    // const getDate = () =>{
+    //     const date = props.data.date;
+    //     setDate(date);
+    // }
+
     const [startDate, setStartDate] = useState(new Date());
     const style = {
         position: 'absolute',
@@ -47,8 +64,8 @@ function TaskItem() {
                 <div className="checkDiv">
                     <input type="checkbox" className="checkTask"></input>
                     <div className="listBox">
-                        <label className="taskName">task 1</label>
-                        <p className="date">11/17/2021</p>
+                        <label className="taskName">{props.data.task}</label>
+                        <p className="date">{props.data.startDate}</p>
                     </div>
                 </div>
                 <div className="functionBox">
@@ -98,7 +115,7 @@ function TaskItem() {
                 </div>
             </div>
             {click === true ? <div class="description" className="descriptionPart">
-                <p className="descriptionText">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p className="descriptionText">{props.data.description}</p>
             </div> : null}
         </div>
     );

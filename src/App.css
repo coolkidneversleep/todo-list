@@ -144,6 +144,9 @@
   width: 20px;
   height: 20px;
 }
+.input[type=checkbox]:checked + label.strikethrough{
+  text-decoration: line-through;
+}
 .checkDiv{
   display: flex;
   justify-items: center;
