@@ -18,7 +18,7 @@ function TaskItem(props) {
     const [startDate, setStartDate] = useState(new Date());
     const [task, setTask] = useState('');
     const [description, setDescription] = useState('');
-
+    let today = new Date();
     useEffect(() => {
         setDB(getDatabase(initializeFirebase()));
 
@@ -115,7 +115,7 @@ function TaskItem(props) {
                     <input type="checkbox" checked={props.data.finish} onChange={()=>completeTask(props.data.id)} className="checkTask"></input>
                     <div className="listBox">
                         <label className="taskName" id={props.data.finish === true ? "complete":""}>{props.data.task}</label>
-                        <p className="date">{props.data.startDate}</p>
+                        <p className={today.getTime() - new Date(props.data.startDate).getTime() < 0 ?"date":"overdueDate"}>{props.data.startDate}</p>
                     </div>
                 </div>
                 <div className="functionBox">

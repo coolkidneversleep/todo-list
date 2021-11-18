@@ -285,6 +285,13 @@
   display: flex;
   padding-top: 2em;
 }
+.overdueDate{
+  font-family: Quicksand;
+  font-size: 0.75em;
+  color: #eb3b0f;
+  margin-left: 1vw;
+  padding: 0;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
