@@ -9,7 +9,7 @@ import Modal from '@mui/material/Modal';
 import DatePicker from "react-datepicker";
 import initializeFirebase from '../firebase';
 import moment from 'moment';
-import { getDatabase, ref, set, get, onValue, push, remove, update } from "firebase/database";
+import { getDatabase, ref, set, remove, update } from "firebase/database";
 
 import "/Users/coolkiddo/Desktop/to-do-list/node_modules/react-datepicker/dist/react-datepicker.css";
 
@@ -119,7 +119,7 @@ function TaskItem(props) {
                     </div>
                 </div>
                 <div className="functionBox">
-                    <button onClick={handleOpenEdit} className="functionButton"><img className="functionImg" src={editImg}></img></button>
+                    <button onClick={handleOpenEdit} className="functionButton"><img alt="eidtImg"className="functionImg" src={editImg}></img></button>
                     <Modal
                         open={openEdit}
                         onClose={handleCloseEdit}
@@ -144,7 +144,7 @@ function TaskItem(props) {
                             </div>
                         </Box>
                     </Modal>
-                    <button onClick={handleOpenDelete} className="functionButton"><img className="functionImg" src={deleteImg}></img></button>
+                    <button onClick={handleOpenDelete} className="functionButton"><img alt="deleteImg" className="functionImg" src={deleteImg}></img></button>
                     <Modal
                         open={openDelete}
                         onClose={handleCloseDelete}
@@ -161,7 +161,7 @@ function TaskItem(props) {
                             </div>
                         </Box>
                     </Modal>
-                    {props.data.description !== "" ? <button onClick={getClick} className="functionButton"><img className="functionImg" src={arrowImg}></img></button> : null}
+                    {props.data.description !== "" ? <button onClick={getClick} className="functionButton"><img alt="arrowImg" className="functionImg" src={arrowImg}></img></button> : null}
                 </div>
             </div>
             {click === true && props.data.description !== "" ? <div class="description" className="descriptionPart">
