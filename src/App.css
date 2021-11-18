@@ -15,6 +15,16 @@
   font-weight: 500;
   color: #c53f3f;
 }
+.notaskBox{
+  padding-top: 10vh;
+  text-align: center;
+}
+.notask_txt{
+  font-family: Quicksand;
+  font-size: 1.25em;
+  font-weight: 500;
+  color: #7868E6;
+}
 .title{
   font-family: Quicksand;
   font-size: 3em;

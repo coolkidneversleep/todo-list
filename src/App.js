@@ -52,7 +52,7 @@ function App() {
       <AddTaskBox></AddTaskBox>
       <SearchTask filterTodo={filterTodo} clearFilter={clearFilter}></SearchTask>
 
-      {showData.map(todo => <TaskItem data={todo} key={todo.id} />)}
+      {showData.length == 0 ? <div className="notaskBox"><p className="notask_txt">hooray! you don't have any tasks to be done on this day</p></div>: showData.map(todo => <TaskItem data={todo} key={todo.id} />)}
 
     </div>
   );
