@@ -11,6 +11,7 @@ function App() {
   const [db, setDB] = useState(null);
   const [showData, setShowData] = useState([]);
   const [todos, setTodo] = useState([]);
+  const [todoMain, setTodoMain] = useState([]);
   useEffect(() => {
     setDB(getDatabase(initializeFirebase()));
   }, [])
@@ -36,6 +37,7 @@ function App() {
           ...data[key]
         });
       }
+      
       todos = todos.sort((a, b) => {
         return new Date(a.startDate).getTime() - new Date(b.startDate).getTime()
       })
