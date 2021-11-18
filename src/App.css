@@ -9,7 +9,12 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+.error_txt{
+  font-family: Quicksand;
+  font-size: 0.5em;
+  font-weight: 500;
+  color: #c53f3f;
+}
 .title{
   font-family: Quicksand;
   font-size: 3em;
@@ -92,7 +97,7 @@
   font-size: 1.25em;
   color: #7868E6;
   border-radius: 10px;
-  padding: 1vh 1vw;
+  padding: 0.5vh 0.5vw;
   width: 15%;
   margin-right: 3%;
   cursor: pointer;
@@ -113,6 +118,7 @@
 }
 .sortDateBox{
   width: 80%;
+  padding-left: 1vw;
 }
 .topic{
   margin: 0;
@@ -144,8 +150,9 @@
   width: 20px;
   height: 20px;
 }
-.input[type=checkbox]:checked + label.strikethrough{
-  text-decoration: line-through;
+#complete{
+  text-decoration: line-through 2px #7868E6;
+  
 }
 .checkDiv{
   display: flex;
@@ -169,10 +176,6 @@
   margin-left: 1vw;
   padding:0;
 }
-.arrowDown{
-  color:#7868E6;
-  font-size: 1em;
-}
 .collapButton{
   background: #a5a3c3;
   border: none;
@@ -180,12 +183,12 @@
   cursor: pointer;
 }
 .descriptionPart{
-  height: 30%;
+  height: max-content;
   background: #ffffff;
   border: 1px solid #e7e6fa;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  padding: 3%;
+  padding: 0.5vh 4vw;
 }
 .descriptionText{
   font-family: Quicksand;
@@ -214,7 +217,7 @@
 .editTitle{
   font-family: Quicksand;
   font-size: 1.75em;
-  font-weight: 500;
+  font-weight: 600;
   color:#7868E6;
 }
 .editInputBox{
